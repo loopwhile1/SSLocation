@@ -7,12 +7,29 @@
 //
 
 #import "ViewController.h"
+#import "SSLocation.h"
+#import "Annotation.h"
+#import <MapKit/MapKit.h>
 
 @interface ViewController ()
-
+- (IBAction)getUserLocationTapped:(id)sender;
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) SSLocationManager *locationManager;
 @end
 
 @implementation ViewController
+@synthesize mapView;
+@synthesize locationManager;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        self.locationManager = [SSLocationManager new];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -33,6 +50,21 @@
     } else {
         return YES;
     }
+}
+
+- (IBAction)getUserLocationTapped:(id)sender
+{
+    [self.locationManager fetchGeocodedUserLocationOnCompletion:^(MKPlacemark *placeMark) {
+        NSLog(@"%@", placeMark);
+        [self.mapView setRegion:MKCoordinateRegionMake(placeMark.coordinate, MKCoordinateSpanMake(0.0001, 0.0001))];
+        [self.mapView removeAnnotations:[self.mapView annotations]];
+        
+        Annotation *annotation = [Annotation new];
+        annotation.placeMark = placeMark;
+        [self.mapView addAnnotation:annotation];
+    } onError:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 @end

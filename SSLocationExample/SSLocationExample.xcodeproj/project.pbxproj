@@ -25,6 +25,7 @@
 		80943B3916097C07008EF8A1 /* SSOneTimeLocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */; };
 		80943B3B16097C1F008EF8A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B3A16097C1F008EF8A1 /* MapKit.framework */; };
 		80943B3D16097C26008EF8A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B3C16097C26008EF8A1 /* CoreLocation.framework */; };
+		80943B4016097E56008EF8A1 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3F16097E56008EF8A1 /* Annotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSOneTimeLocationOperation.m; sourceTree = "<group>"; };
 		80943B3A16097C1F008EF8A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		80943B3C16097C26008EF8A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		80943B3E16097E56008EF8A1 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		80943B3F16097E56008EF8A1 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				80943B0416097BC2008EF8A1 /* AppDelegate.m */,
 				80943B0616097BC2008EF8A1 /* ViewController.h */,
 				80943B0716097BC2008EF8A1 /* ViewController.m */,
+				80943B3E16097E56008EF8A1 /* Annotation.h */,
+				80943B3F16097E56008EF8A1 /* Annotation.m */,
 				80943B0916097BC2008EF8A1 /* ViewController_iPhone.xib */,
 				80943B0C16097BC2008EF8A1 /* ViewController_iPad.xib */,
 				80943AFB16097BC2008EF8A1 /* Supporting Files */,
@@ -296,6 +301,7 @@
 				80943B0816097BC2008EF8A1 /* ViewController.m in Sources */,
 				80943B3816097C07008EF8A1 /* SSLocationManager.m in Sources */,
 				80943B3916097C07008EF8A1 /* SSOneTimeLocationOperation.m in Sources */,
+				80943B4016097E56008EF8A1 /* Annotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +416,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
 				INFOPLIST_FILE = "SSLocationExample/SSLocationExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -421,7 +429,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
 				INFOPLIST_FILE = "SSLocationExample/SSLocationExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
