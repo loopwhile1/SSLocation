@@ -129,6 +129,7 @@
         self.isUpdatingLocation = YES;
         [self.timeOutTimer invalidate];
         self.timeOutTimer = [NSTimer scheduledTimerWithTimeInterval:self.locationTimeoutInterval target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO];
+        self.locationManager.delegate = self;
         [self.locationManager startUpdatingLocation];
     }
 }

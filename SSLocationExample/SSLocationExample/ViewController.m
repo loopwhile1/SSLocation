@@ -56,12 +56,13 @@
 {
     [self.locationManager fetchGeocodedUserLocationOnCompletion:^(MKPlacemark *placeMark) {
         NSLog(@"%@", placeMark);
-        [self.mapView setRegion:MKCoordinateRegionMake(placeMark.coordinate, MKCoordinateSpanMake(0.0001, 0.0001))];
+        [self.mapView setRegion:MKCoordinateRegionMake(placeMark.coordinate, MKCoordinateSpanMake(0.0001, 0.0001)) animated:YES];
         [self.mapView removeAnnotations:[self.mapView annotations]];
         
         Annotation *annotation = [Annotation new];
         annotation.placeMark = placeMark;
         [self.mapView addAnnotation:annotation];
+        [self.mapView selectAnnotation:annotation animated:YES];
     } onError:^(NSError *error) {
         NSLog(@"%@", error);
     }];
