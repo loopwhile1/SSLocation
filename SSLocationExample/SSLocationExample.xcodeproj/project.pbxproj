@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80943AF516097BC2008EF8A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943AF416097BC2008EF8A1 /* UIKit.framework */; };
+		80943AF716097BC2008EF8A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943AF616097BC2008EF8A1 /* Foundation.framework */; };
+		80943AF916097BC2008EF8A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943AF816097BC2008EF8A1 /* CoreGraphics.framework */; };
+		80943AFF16097BC2008EF8A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80943AFD16097BC2008EF8A1 /* InfoPlist.strings */; };
+		80943B0116097BC2008EF8A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B0016097BC2008EF8A1 /* main.m */; };
+		80943B0516097BC2008EF8A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B0416097BC2008EF8A1 /* AppDelegate.m */; };
+		80943B0816097BC2008EF8A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B0716097BC2008EF8A1 /* ViewController.m */; };
+		80943B0B16097BC2008EF8A1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80943B0916097BC2008EF8A1 /* ViewController_iPhone.xib */; };
+		80943B0E16097BC2008EF8A1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80943B0C16097BC2008EF8A1 /* ViewController_iPad.xib */; };
+		80943B1616097BC2008EF8A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B1516097BC2008EF8A1 /* SenTestingKit.framework */; };
+		80943B1716097BC2008EF8A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943AF416097BC2008EF8A1 /* UIKit.framework */; };
+		80943B1816097BC2008EF8A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943AF616097BC2008EF8A1 /* Foundation.framework */; };
+		80943B2016097BC2008EF8A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80943B1E16097BC2008EF8A1 /* InfoPlist.strings */; };
+		80943B2316097BC2008EF8A1 /* SSLocationExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B2216097BC2008EF8A1 /* SSLocationExampleTests.m */; };
+		80943B3816097C07008EF8A1 /* SSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3516097C07008EF8A1 /* SSLocationManager.m */; };
+		80943B3916097C07008EF8A1 /* SSOneTimeLocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */; };
+		80943B3B16097C1F008EF8A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B3A16097C1F008EF8A1 /* MapKit.framework */; };
+		80943B3D16097C26008EF8A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B3C16097C26008EF8A1 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80943B1916097BC2008EF8A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80943AE716097BC2008EF8A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80943AEF16097BC2008EF8A1;
+			remoteInfo = SSLocationExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80943AF016097BC2008EF8A1 /* SSLocationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSLocationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80943AF416097BC2008EF8A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		80943AF616097BC2008EF8A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80943AF816097BC2008EF8A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		80943AFC16097BC2008EF8A1 /* SSLocationExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSLocationExample-Info.plist"; sourceTree = "<group>"; };
+		80943AFE16097BC2008EF8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		80943B0016097BC2008EF8A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80943B0216097BC2008EF8A1 /* SSLocationExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSLocationExample-Prefix.pch"; sourceTree = "<group>"; };
+		80943B0316097BC2008EF8A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80943B0416097BC2008EF8A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80943B0616097BC2008EF8A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		80943B0716097BC2008EF8A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80943B0A16097BC2008EF8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		80943B0D16097BC2008EF8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		80943B1416097BC2008EF8A1 /* SSLocationExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSLocationExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80943B1516097BC2008EF8A1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		80943B1D16097BC2008EF8A1 /* SSLocationExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSLocationExampleTests-Info.plist"; sourceTree = "<group>"; };
+		80943B1F16097BC2008EF8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		80943B2116097BC2008EF8A1 /* SSLocationExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSLocationExampleTests.h; sourceTree = "<group>"; };
+		80943B2216097BC2008EF8A1 /* SSLocationExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSLocationExampleTests.m; sourceTree = "<group>"; };
+		80943B3316097C07008EF8A1 /* SSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocation.h; sourceTree = "<group>"; };
+		80943B3416097C07008EF8A1 /* SSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocationManager.h; sourceTree = "<group>"; };
+		80943B3516097C07008EF8A1 /* SSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocationManager.m; sourceTree = "<group>"; };
+		80943B3616097C07008EF8A1 /* SSOneTimeLocationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSOneTimeLocationOperation.h; sourceTree = "<group>"; };
+		80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSOneTimeLocationOperation.m; sourceTree = "<group>"; };
+		80943B3A16097C1F008EF8A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		80943B3C16097C26008EF8A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80943AED16097BC2008EF8A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80943B3D16097C26008EF8A1 /* CoreLocation.framework in Frameworks */,
+				80943B3B16097C1F008EF8A1 /* MapKit.framework in Frameworks */,
+				80943AF516097BC2008EF8A1 /* UIKit.framework in Frameworks */,
+				80943AF716097BC2008EF8A1 /* Foundation.framework in Frameworks */,
+				80943AF916097BC2008EF8A1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80943B1016097BC2008EF8A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80943B1616097BC2008EF8A1 /* SenTestingKit.framework in Frameworks */,
+				80943B1716097BC2008EF8A1 /* UIKit.framework in Frameworks */,
+				80943B1816097BC2008EF8A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80943AE516097BC2008EF8A1 = {
+			isa = PBXGroup;
+			children = (
+				80943B3C16097C26008EF8A1 /* CoreLocation.framework */,
+				80943B3A16097C1F008EF8A1 /* MapKit.framework */,
+				80943B3216097C07008EF8A1 /* SSLocation */,
+				80943AFA16097BC2008EF8A1 /* SSLocationExample */,
+				80943B1B16097BC2008EF8A1 /* SSLocationExampleTests */,
+				80943AF316097BC2008EF8A1 /* Frameworks */,
+				80943AF116097BC2008EF8A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80943AF116097BC2008EF8A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80943AF016097BC2008EF8A1 /* SSLocationExample.app */,
+				80943B1416097BC2008EF8A1 /* SSLocationExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80943AF316097BC2008EF8A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80943AF416097BC2008EF8A1 /* UIKit.framework */,
+				80943AF616097BC2008EF8A1 /* Foundation.framework */,
+				80943AF816097BC2008EF8A1 /* CoreGraphics.framework */,
+				80943B1516097BC2008EF8A1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80943AFA16097BC2008EF8A1 /* SSLocationExample */ = {
+			isa = PBXGroup;
+			children = (
+				80943B0316097BC2008EF8A1 /* AppDelegate.h */,
+				80943B0416097BC2008EF8A1 /* AppDelegate.m */,
+				80943B0616097BC2008EF8A1 /* ViewController.h */,
+				80943B0716097BC2008EF8A1 /* ViewController.m */,
+				80943B0916097BC2008EF8A1 /* ViewController_iPhone.xib */,
+				80943B0C16097BC2008EF8A1 /* ViewController_iPad.xib */,
+				80943AFB16097BC2008EF8A1 /* Supporting Files */,
+			);
+			path = SSLocationExample;
+			sourceTree = "<group>";
+		};
+		80943AFB16097BC2008EF8A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80943AFC16097BC2008EF8A1 /* SSLocationExample-Info.plist */,
+				80943AFD16097BC2008EF8A1 /* InfoPlist.strings */,
+				80943B0016097BC2008EF8A1 /* main.m */,
+				80943B0216097BC2008EF8A1 /* SSLocationExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80943B1B16097BC2008EF8A1 /* SSLocationExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				80943B2116097BC2008EF8A1 /* SSLocationExampleTests.h */,
+				80943B2216097BC2008EF8A1 /* SSLocationExampleTests.m */,
+				80943B1C16097BC2008EF8A1 /* Supporting Files */,
+			);
+			path = SSLocationExampleTests;
+			sourceTree = "<group>";
+		};
+		80943B1C16097BC2008EF8A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80943B1D16097BC2008EF8A1 /* SSLocationExampleTests-Info.plist */,
+				80943B1E16097BC2008EF8A1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80943B3216097C07008EF8A1 /* SSLocation */ = {
+			isa = PBXGroup;
+			children = (
+				80943B3316097C07008EF8A1 /* SSLocation.h */,
+				80943B3416097C07008EF8A1 /* SSLocationManager.h */,
+				80943B3516097C07008EF8A1 /* SSLocationManager.m */,
+				80943B3616097C07008EF8A1 /* SSOneTimeLocationOperation.h */,
+				80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */,
+			);
+			name = SSLocation;
+			path = ../SSLocation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80943AEF16097BC2008EF8A1 /* SSLocationExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80943B2616097BC2008EF8A1 /* Build configuration list for PBXNativeTarget "SSLocationExample" */;
+			buildPhases = (
+				80943AEC16097BC2008EF8A1 /* Sources */,
+				80943AED16097BC2008EF8A1 /* Frameworks */,
+				80943AEE16097BC2008EF8A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSLocationExample;
+			productName = SSLocationExample;
+			productReference = 80943AF016097BC2008EF8A1 /* SSLocationExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80943B1316097BC2008EF8A1 /* SSLocationExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80943B2916097BC2008EF8A1 /* Build configuration list for PBXNativeTarget "SSLocationExampleTests" */;
+			buildPhases = (
+				80943B0F16097BC2008EF8A1 /* Sources */,
+				80943B1016097BC2008EF8A1 /* Frameworks */,
+				80943B1116097BC2008EF8A1 /* Resources */,
+				80943B1216097BC2008EF8A1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80943B1A16097BC2008EF8A1 /* PBXTargetDependency */,
+			);
+			name = SSLocationExampleTests;
+			productName = SSLocationExampleTests;
+			productReference = 80943B1416097BC2008EF8A1 /* SSLocationExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80943AE716097BC2008EF8A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Sanjit Saluja";
+			};
+			buildConfigurationList = 80943AEA16097BC2008EF8A1 /* Build configuration list for PBXProject "SSLocationExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80943AE516097BC2008EF8A1;
+			productRefGroup = 80943AF116097BC2008EF8A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80943AEF16097BC2008EF8A1 /* SSLocationExample */,
+				80943B1316097BC2008EF8A1 /* SSLocationExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80943AEE16097BC2008EF8A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80943AFF16097BC2008EF8A1 /* InfoPlist.strings in Resources */,
+				80943B0B16097BC2008EF8A1 /* ViewController_iPhone.xib in Resources */,
+				80943B0E16097BC2008EF8A1 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80943B1116097BC2008EF8A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80943B2016097BC2008EF8A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80943B1216097BC2008EF8A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80943AEC16097BC2008EF8A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80943B0116097BC2008EF8A1 /* main.m in Sources */,
+				80943B0516097BC2008EF8A1 /* AppDelegate.m in Sources */,
+				80943B0816097BC2008EF8A1 /* ViewController.m in Sources */,
+				80943B3816097C07008EF8A1 /* SSLocationManager.m in Sources */,
+				80943B3916097C07008EF8A1 /* SSOneTimeLocationOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80943B0F16097BC2008EF8A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80943B2316097BC2008EF8A1 /* SSLocationExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80943B1A16097BC2008EF8A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80943AEF16097BC2008EF8A1 /* SSLocationExample */;
+			targetProxy = 80943B1916097BC2008EF8A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80943AFD16097BC2008EF8A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80943AFE16097BC2008EF8A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		80943B0916097BC2008EF8A1 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80943B0A16097BC2008EF8A1 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		80943B0C16097BC2008EF8A1 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80943B0D16097BC2008EF8A1 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		80943B1E16097BC2008EF8A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80943B1F16097BC2008EF8A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80943B2416097BC2008EF8A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80943B2516097BC2008EF8A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80943B2716097BC2008EF8A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
+				INFOPLIST_FILE = "SSLocationExample/SSLocationExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		80943B2816097BC2008EF8A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
+				INFOPLIST_FILE = "SSLocationExample/SSLocationExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		80943B2A16097BC2008EF8A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSLocationExample.app/SSLocationExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
+				INFOPLIST_FILE = "SSLocationExampleTests/SSLocationExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		80943B2B16097BC2008EF8A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSLocationExample.app/SSLocationExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
+				INFOPLIST_FILE = "SSLocationExampleTests/SSLocationExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80943AEA16097BC2008EF8A1 /* Build configuration list for PBXProject "SSLocationExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80943B2416097BC2008EF8A1 /* Debug */,
+				80943B2516097BC2008EF8A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80943B2616097BC2008EF8A1 /* Build configuration list for PBXNativeTarget "SSLocationExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80943B2716097BC2008EF8A1 /* Debug */,
+				80943B2816097BC2008EF8A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80943B2916097BC2008EF8A1 /* Build configuration list for PBXNativeTarget "SSLocationExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80943B2A16097BC2008EF8A1 /* Debug */,
+				80943B2B16097BC2008EF8A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80943AE716097BC2008EF8A1 /* Project object */;
+}
