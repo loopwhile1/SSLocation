@@ -65,6 +65,7 @@
         [self.mapView selectAnnotation:annotation animated:YES];
     } onError:^(NSError *error) {
         NSLog(@"%@", error);
+        [[[UIAlertView alloc] initWithTitle:@"Location failed" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
     }];
 }
 
