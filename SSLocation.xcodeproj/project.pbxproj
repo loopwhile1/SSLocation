@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80E719901616705A0025C8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E7198F1616705A0025C8E4 /* Foundation.framework */; };
+		80E719A9161670A90025C8E4 /* SSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E719A6161670A90025C8E4 /* SSLocationManager.m */; };
+		80E719AA161670A90025C8E4 /* SSOneTimeLocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E719A8161670A90025C8E4 /* SSOneTimeLocationOperation.m */; };
+		80E719C7161671C70025C8E4 /* SSLocation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 80E719A4161670A90025C8E4 /* SSLocation.h */; };
+		80E719C8161671C70025C8E4 /* SSLocationManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 80E719A5161670A90025C8E4 /* SSLocationManager.h */; };
+		80E719C9161671C70025C8E4 /* SSOneTimeLocationOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 80E719A7161670A90025C8E4 /* SSOneTimeLocationOperation.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80E719B81616714D0025C8E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E719AF1616714D0025C8E4 /* SSLocationExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80943AF016097BC2008EF8A1;
+			remoteInfo = SSLocationExample;
+		};
+		80E719BA1616714D0025C8E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E719AF1616714D0025C8E4 /* SSLocationExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80943B1416097BC2008EF8A1;
+			remoteInfo = SSLocationExampleTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		80E7198A1616705A0025C8E4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				80E719C7161671C70025C8E4 /* SSLocation.h in CopyFiles */,
+				80E719C8161671C70025C8E4 /* SSLocationManager.h in CopyFiles */,
+				80E719C9161671C70025C8E4 /* SSOneTimeLocationOperation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		80E7198C1616705A0025C8E4 /* libSSLocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSLocation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		80E7198F1616705A0025C8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80E719A4161670A90025C8E4 /* SSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocation.h; sourceTree = "<group>"; };
+		80E719A5161670A90025C8E4 /* SSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocationManager.h; sourceTree = "<group>"; };
+		80E719A6161670A90025C8E4 /* SSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocationManager.m; sourceTree = "<group>"; };
+		80E719A7161670A90025C8E4 /* SSOneTimeLocationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSOneTimeLocationOperation.h; sourceTree = "<group>"; };
+		80E719A8161670A90025C8E4 /* SSOneTimeLocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSOneTimeLocationOperation.m; sourceTree = "<group>"; };
+		80E719AF1616714D0025C8E4 /* SSLocationExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSLocationExample.xcodeproj; path = SSLocationExample/SSLocationExample.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80E719891616705A0025C8E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E719901616705A0025C8E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80E719811616705A0025C8E4 = {
+			isa = PBXGroup;
+			children = (
+				80E719911616705A0025C8E4 /* SSLocation */,
+				80E7198E1616705A0025C8E4 /* Frameworks */,
+				80E7198D1616705A0025C8E4 /* Products */,
+				80E719AF1616714D0025C8E4 /* SSLocationExample.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		80E7198D1616705A0025C8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80E7198C1616705A0025C8E4 /* libSSLocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80E7198E1616705A0025C8E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80E7198F1616705A0025C8E4 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80E719911616705A0025C8E4 /* SSLocation */ = {
+			isa = PBXGroup;
+			children = (
+				80E719A4161670A90025C8E4 /* SSLocation.h */,
+				80E719A5161670A90025C8E4 /* SSLocationManager.h */,
+				80E719A6161670A90025C8E4 /* SSLocationManager.m */,
+				80E719A7161670A90025C8E4 /* SSOneTimeLocationOperation.h */,
+				80E719A8161670A90025C8E4 /* SSOneTimeLocationOperation.m */,
+			);
+			path = SSLocation;
+			sourceTree = "<group>";
+		};
+		80E719B01616714D0025C8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80E719B91616714D0025C8E4 /* SSLocationExample.app */,
+				80E719BB1616714D0025C8E4 /* SSLocationExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80E7198B1616705A0025C8E4 /* SSLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80E7199A1616705A0025C8E4 /* Build configuration list for PBXNativeTarget "SSLocation" */;
+			buildPhases = (
+				80E719881616705A0025C8E4 /* Sources */,
+				80E719891616705A0025C8E4 /* Frameworks */,
+				80E7198A1616705A0025C8E4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSLocation;
+			productName = SSLocation;
+			productReference = 80E7198C1616705A0025C8E4 /* libSSLocation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80E719831616705A0025C8E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Sanjit Saluja";
+			};
+			buildConfigurationList = 80E719861616705A0025C8E4 /* Build configuration list for PBXProject "SSLocation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80E719811616705A0025C8E4;
+			productRefGroup = 80E7198D1616705A0025C8E4 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 80E719B01616714D0025C8E4 /* Products */;
+					ProjectRef = 80E719AF1616714D0025C8E4 /* SSLocationExample.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				80E7198B1616705A0025C8E4 /* SSLocation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		80E719B91616714D0025C8E4 /* SSLocationExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SSLocationExample.app;
+			remoteRef = 80E719B81616714D0025C8E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E719BB1616714D0025C8E4 /* SSLocationExampleTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SSLocationExampleTests.octest;
+			remoteRef = 80E719BA1616714D0025C8E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80E719881616705A0025C8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E719A9161670A90025C8E4 /* SSLocationManager.m in Sources */,
+				80E719AA161670A90025C8E4 /* SSOneTimeLocationOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		80E719981616705A0025C8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		80E719991616705A0025C8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80E7199B1616705A0025C8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SSLocation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		80E7199C1616705A0025C8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SSLocation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80E719861616705A0025C8E4 /* Build configuration list for PBXProject "SSLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80E719981616705A0025C8E4 /* Debug */,
+				80E719991616705A0025C8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80E7199A1616705A0025C8E4 /* Build configuration list for PBXNativeTarget "SSLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80E7199B1616705A0025C8E4 /* Debug */,
+				80E7199C1616705A0025C8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80E719831616705A0025C8E4 /* Project object */;
+}

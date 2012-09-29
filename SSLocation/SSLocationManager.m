@@ -29,8 +29,10 @@
 #define DEFAULT_LOCATION_TIMEOUT_INTERVAL 10.0f
 
 @interface SSLocationManager()
-
-// instance of the location manager
+{
+    BOOL notifyingObservers_;
+}
+// instance of the core location manager
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 // instance of the reverse geocoder
@@ -45,6 +47,9 @@
 // timer to time the location process out
 @property (nonatomic, strong) NSTimer *timeOutTimer;
 
+// pending adds: listeners who would like to know the location once
+@property (nonatomic, strong) NSMutableSet *pendingAddForOneTimeLocationOperations;
+
 @end
 
 @implementation SSLocationManager
@@ -53,9 +58,15 @@
             oneTimeLocationOperations = oneTimeLocationOperations_,
             isUpdatingLocation = isUpdatingLocation_,
             locationTimeoutInterval = locationTimeoutInterval_,
-            timeOutTimer = timeOutTimer_;
+            timeOutTimer = timeOutTimer_,
+            pendingAddForOneTimeLocationOperations = pendingAddForOneTimeLocationOperations_;
 
 @dynamic desiredAccuracy;
+
++ (void)initialize
+{
+    kSSErrorDomain = @"com.sanjitsaluja.sslocation";
+}
 
 - (void)dealloc
 {
@@ -71,6 +82,7 @@
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         self.oneTimeLocationOperations = [NSMutableSet set];
+        self.pendingAddForOneTimeLocationOperations = [NSMutableSet set];
         self.locationTimeoutInterval = DEFAULT_LOCATION_TIMEOUT_INTERVAL;
     }
     return self;
@@ -105,6 +117,8 @@
     if (locationTimeoutInterval_ != locationTimeoutInterval)
     {
         locationTimeoutInterval_ = locationTimeoutInterval;
+        
+        // Reschedule if a timer is already running
         if ([self.timeOutTimer isValid])
         {
             self.timeOutTimer = [NSTimer timerWithTimeInterval:self.locationTimeoutInterval target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO];
@@ -116,21 +130,22 @@
 #pragma mark -
 #pragma mark Public methods
 
-
 - (void)fetchGeocodedUserLocationOnCompletion:(SSLocationSuccessBlock)completionBlock onError:(SSLocationErrorBlock)errorBlock
 {
     SSOneTimeLocationOperation *op = [SSOneTimeLocationOperation new];
     op.succesBlock = completionBlock;
     op.errorBlock = errorBlock;
-    [self.oneTimeLocationOperations addObject:op];
     
-    if (!self.isUpdatingLocation)
+    if (!notifyingObservers_)
+    {        
+        [self.oneTimeLocationOperations addObject:op];
+        
+        // Start locating if it is already isn't running.
+        [self startLocationAndGeocode];
+    }
+    else
     {
-        self.isUpdatingLocation = YES;
-        [self.timeOutTimer invalidate];
-        self.timeOutTimer = [NSTimer scheduledTimerWithTimeInterval:self.locationTimeoutInterval target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO];
-        self.locationManager.delegate = self;
-        [self.locationManager startUpdatingLocation];
+        [self.pendingAddForOneTimeLocationOperations addObject:op];
     }
 }
 
@@ -139,6 +154,8 @@
 #pragma mark CLLocationManagerDelegate implementation
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
+    notifyingObservers_ = YES;
+    
     // Inform all observers waiting for a location
     for (SSOneTimeLocationOperation *op in self.oneTimeLocationOperations)
     {
@@ -150,12 +167,15 @@
     
     // stop location/timer/geocode
     [self stopLocationAndGeocode];
+    
+    notifyingObservers_ = NO;
+    [self commitPending];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     if (self.locationManager == manager)
-    {
+    {   
         // stop location
         [self.locationManager stopUpdatingLocation];
         
@@ -173,8 +193,11 @@
 
 #pragma mark -
 #pragma mark oneTimeLocationListeners
+
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
 {
+    notifyingObservers_ = YES;
+    
     // Inform all observers waiting for a location
     for (SSOneTimeLocationOperation *op in self.oneTimeLocationOperations)
     {
@@ -186,11 +209,16 @@
     
     // stop location/timer/geocode
     [self stopLocationAndGeocode];
+    
+    notifyingObservers_ = NO;
+    [self commitPending];
 }
 
 - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark
 {
     // Inform all observers waiting for a location
+    notifyingObservers_ = YES;
+    
     for (SSOneTimeLocationOperation *op in self.oneTimeLocationOperations)
     {
         op.succesBlock(placemark);
@@ -201,10 +229,19 @@
     
     // stop location/timer/geocode
     [self stopLocationAndGeocode];
+    
+    notifyingObservers_ = NO;
+    [self commitPending];
 }
 
 #pragma mark -
 #pragma mark Timer
+- (void)scheduleTimer
+{
+    [self.timeOutTimer invalidate];
+    self.timeOutTimer = [NSTimer scheduledTimerWithTimeInterval:self.locationTimeoutInterval target:self selector:@selector(timerExpired:) userInfo:nil repeats:NO];
+}
+
 - (void)timerExpired:(NSTimer *)timer
 {
     if (self.timeOutTimer == timer)
@@ -215,7 +252,8 @@
         // Inform all observers waiting for a location
         for (SSOneTimeLocationOperation *op in self.oneTimeLocationOperations)
         {
-            op.errorBlock(nil);
+            NSError *timeOutError = [NSError errorWithDomain:kSSErrorDomain code:ssLocationTimedOut userInfo:nil];
+            op.errorBlock(timeOutError);
         }        
     }
 }
@@ -232,6 +270,36 @@
     
     self.reverseGeocoder.delegate = nil;
     [self.reverseGeocoder cancel];
+}
+
+- (void)commitPending
+{
+	NSAssert(!notifyingObservers_, @"Tried to commit pending observers while notifying");
+	for (id observer in self.pendingAddForOneTimeLocationOperations)
+    {
+		[self.oneTimeLocationOperations addObject:observer];
+    }
+	[self.pendingAddForOneTimeLocationOperations removeAllObjects];
+    
+    if ([self.oneTimeLocationOperations count] > 0)
+    {
+        [self startLocationAndGeocode];
+    }
+}
+
+- (void)startLocationAndGeocode
+{
+    if (!self.isUpdatingLocation)
+    {
+        self.isUpdatingLocation = YES;
+        
+        // start location timer
+        [self scheduleTimer];
+        
+        // Start core location
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingLocation];
+    }
 }
 
 @end

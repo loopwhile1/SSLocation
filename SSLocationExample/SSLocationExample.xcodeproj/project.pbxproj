@@ -21,11 +21,10 @@
 		80943B1816097BC2008EF8A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943AF616097BC2008EF8A1 /* Foundation.framework */; };
 		80943B2016097BC2008EF8A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80943B1E16097BC2008EF8A1 /* InfoPlist.strings */; };
 		80943B2316097BC2008EF8A1 /* SSLocationExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B2216097BC2008EF8A1 /* SSLocationExampleTests.m */; };
-		80943B3816097C07008EF8A1 /* SSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3516097C07008EF8A1 /* SSLocationManager.m */; };
-		80943B3916097C07008EF8A1 /* SSOneTimeLocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */; };
 		80943B3B16097C1F008EF8A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B3A16097C1F008EF8A1 /* MapKit.framework */; };
 		80943B3D16097C26008EF8A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80943B3C16097C26008EF8A1 /* CoreLocation.framework */; };
 		80943B4016097E56008EF8A1 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80943B3F16097E56008EF8A1 /* Annotation.m */; };
+		80E719BF1616717A0025C8E4 /* libSSLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E719BE1616717A0025C8E4 /* libSSLocation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,15 +58,11 @@
 		80943B1F16097BC2008EF8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		80943B2116097BC2008EF8A1 /* SSLocationExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSLocationExampleTests.h; sourceTree = "<group>"; };
 		80943B2216097BC2008EF8A1 /* SSLocationExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSLocationExampleTests.m; sourceTree = "<group>"; };
-		80943B3316097C07008EF8A1 /* SSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocation.h; sourceTree = "<group>"; };
-		80943B3416097C07008EF8A1 /* SSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLocationManager.h; sourceTree = "<group>"; };
-		80943B3516097C07008EF8A1 /* SSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLocationManager.m; sourceTree = "<group>"; };
-		80943B3616097C07008EF8A1 /* SSOneTimeLocationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSOneTimeLocationOperation.h; sourceTree = "<group>"; };
-		80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSOneTimeLocationOperation.m; sourceTree = "<group>"; };
 		80943B3A16097C1F008EF8A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		80943B3C16097C26008EF8A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		80943B3E16097E56008EF8A1 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		80943B3F16097E56008EF8A1 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		80E719BE1616717A0025C8E4 /* libSSLocation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSSLocation.a; path = "../../../Library/Developer/Xcode/DerivedData/SSLocation-dbebnkosglaxisessxbeqdeeoxue/Build/Products/Debug-iphoneos/libSSLocation.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E719BF1616717A0025C8E4 /* libSSLocation.a in Frameworks */,
 				80943B3D16097C26008EF8A1 /* CoreLocation.framework in Frameworks */,
 				80943B3B16097C1F008EF8A1 /* MapKit.framework in Frameworks */,
 				80943AF516097BC2008EF8A1 /* UIKit.framework in Frameworks */,
@@ -99,9 +95,9 @@
 		80943AE516097BC2008EF8A1 = {
 			isa = PBXGroup;
 			children = (
+				80E719BE1616717A0025C8E4 /* libSSLocation.a */,
 				80943B3C16097C26008EF8A1 /* CoreLocation.framework */,
 				80943B3A16097C1F008EF8A1 /* MapKit.framework */,
-				80943B3216097C07008EF8A1 /* SSLocation */,
 				80943AFA16097BC2008EF8A1 /* SSLocationExample */,
 				80943B1B16097BC2008EF8A1 /* SSLocationExampleTests */,
 				80943AF316097BC2008EF8A1 /* Frameworks */,
@@ -173,19 +169,6 @@
 				80943B1E16097BC2008EF8A1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		80943B3216097C07008EF8A1 /* SSLocation */ = {
-			isa = PBXGroup;
-			children = (
-				80943B3316097C07008EF8A1 /* SSLocation.h */,
-				80943B3416097C07008EF8A1 /* SSLocationManager.h */,
-				80943B3516097C07008EF8A1 /* SSLocationManager.m */,
-				80943B3616097C07008EF8A1 /* SSOneTimeLocationOperation.h */,
-				80943B3716097C07008EF8A1 /* SSOneTimeLocationOperation.m */,
-			);
-			name = SSLocation;
-			path = ../SSLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +282,6 @@
 				80943B0116097BC2008EF8A1 /* main.m in Sources */,
 				80943B0516097BC2008EF8A1 /* AppDelegate.m in Sources */,
 				80943B0816097BC2008EF8A1 /* ViewController.m in Sources */,
-				80943B3816097C07008EF8A1 /* SSLocationManager.m in Sources */,
-				80943B3916097C07008EF8A1 /* SSOneTimeLocationOperation.m in Sources */,
 				80943B4016097E56008EF8A1 /* Annotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +398,13 @@
 				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
 				INFOPLIST_FILE = "SSLocationExample/SSLocationExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SSLocation-dbebnkosglaxisessxbeqdeeoxue/Build/Products/Debug-iphoneos\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../SSLocation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -430,8 +416,13 @@
 				GCC_PREFIX_HEADER = "SSLocationExample/SSLocationExample-Prefix.pch";
 				INFOPLIST_FILE = "SSLocationExample/SSLocationExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SSLocation-dbebnkosglaxisessxbeqdeeoxue/Build/Products/Debug-iphoneos\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../SSLocation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -29,11 +29,24 @@
 typedef void (^SSLocationSuccessBlock)(MKPlacemark *placeMark);
 typedef void (^SSLocationErrorBlock)(NSError *error);
 
+
+static NSString *kSSErrorDomain;
+#pragma unused(kSSErrorDomain)
+
+enum SSErrorCodes {
+    ssLocationTimedOut
+    };
+
+/*!
+ * @class:      SSLocationManager
+ * @abstract:   Object provides bulk of SSLocation functinality.
+ */
 @interface SSLocationManager : NSObject <CLLocationManagerDelegate, MKReverseGeocoderDelegate>
 
 /*!
  * @property:   desiredAccuracy
- * @abstract:   Set/Get desired accuracy for location. Default accuracy is kCLLocationAccuracyHundredMeters.
+ * @abstract:   Set/Get desired accuracy for location. 
+ * @notes:      Default accuracy is kCLLocationAccuracyHundredMeters.
  */
 @property (nonatomic, assign) CLLocationAccuracy desiredAccuracy;
 
