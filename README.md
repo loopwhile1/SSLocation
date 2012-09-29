@@ -7,6 +7,12 @@ Usage
 -----
 	// Instantiate a location manager
 	self.ssLocationManager = [[SSLocationManager alloc] init];
+
+	// Optional. configure accuracy. Default 100 meters
+	self.ssLocationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+
+	// Optional. configure time out. Default 10 seconds
+	self.ssLocationManager.locationTimeoutInterval = 20.f;
 	
 	// Request user's location
 	[self.locationManager fetchGeocodedUserLocationOnCompletion:^(MKPlacemark *placeMark) {
